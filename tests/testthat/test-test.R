@@ -11,6 +11,6 @@ test_that("test with tempdir", {
   path_out <- gsub("\\-.*$", "\\-in\\.R", path_perm)
   identical(path_out, path_perm)
   #> TRUE
-  ref <- enc::read_lines_enc(path_perm) # does not work with path_out, only works with path_term
+  ref <- enc::read_lines_enc(path_out) # does not work with path_out, only works with path_term
   unlink(dir)
 })
